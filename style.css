@@ -1,0 +1,150 @@
+:root {
+  --primaryPaleBlue: hsl(225, 100%, 94%);
+  --primaryBrightBlue: hsl(245, 75%, 52%);
+
+  --neutralVeryPaleBlue: hsl(225, 100%, 98%);
+  --neutralDesaturatedBlue: hsl(224, 23%, 55%);
+  --neutralDarkBlue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Red Hat Display", system-ui;
+  background-image: url(/Order_summary/assets/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-color: var(--primaryPaleBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--neutralDesaturatedBlue);
+}
+button {
+  display: block;
+}
+img {
+  display: block;
+}
+h2 {
+  margin: 15px 0;
+  font-weight: 900;
+}
+
+main {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 14px 24px hsla(0, 0%, 0%, 0.2);
+}
+
+
+
+main .hero {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px 20px 0 0;
+}
+
+
+
+section {
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+
+.ro1 p {
+  line-height: 150%;
+}
+
+
+
+.ro2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 18px;
+  border-radius: 10px;
+  background-color: var(--neutralVeryPaleBlue);
+  margin: 20px 0;
+}
+.ro2 .col1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.ro2 .col1-col2 .plan {
+  color: var(--neutralDarkBlue);
+  font-weight: 900;
+}
+.ro2 .col2 a {
+  font-weight: 700;
+  color: var(--primaryBrightBlue);
+}
+
+
+
+.ro3 {
+  margin: 30px 0 10px 0;
+}
+.ro3 button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 16px;
+  font-family: "Red Hat Display", system-ui;
+  font-weight: 900;
+  font-size: 16px;
+  color: white;
+  background-color: var(--primaryBrightBlue);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 10px 18px hsla(0, 0%, 0%, 0.3);
+  cursor: pointer;
+}
+
+.ro3 .cancel {
+  display: inline-block;
+  font-weight: 900;
+  margin-top: 16px;
+  color: var(--neutralDesaturatedBlue);
+  cursor: pointer;
+}
+
+/* .payment:hover {
+  background-color: hsla(245, 75%, 65%);
+}
+.cancel:hover {
+  color: var(--neutralDarkBlue);
+}
+#change:hover {
+  color: hsla(245, 75%, 75%);
+  text-decoration: none;
+} */
+
+@media screen and (max-width: 375px) {
+  body {
+    padding: 24px;
+  }
+
+
+
+  section {
+    padding: 30px;
+  }
+  .plan, .price, a {
+    font-size: 14px;
+  }
+}

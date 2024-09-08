@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Order_summary/style.css">
+  <link rel="icon" href="/Order_summary/assets/favicon-32x32.png">
+  <title>Order Summary</title>
+</head>
+<body>
+  <main>
+    <img class="hero" src="/Order_summary/assets/illustration-hero.svg" alt="illustration">
+    <section>
+      <div class="ro1">
+        <h2>Order Summary</h2>
+        <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      </div>
+      <div class="ro2">
+        <div class="col1">
+          <div class="col1-col1">
+            <img src="/Order_summary/assets/icon-music.svg" alt="music">
+          </div>
+          <div class="col1-col2">
+            <p class="plan">Annual Plan</p>
+            <p class="price">$59.99/year</p>
+          </div>
+        </div>
+        <div class="col2">
+          <a id="change" href="#">Change</a>
+        </div>
+      </div>
+      <div class="ro3">
+        <button class="payment">Proceed to Payment</button>
+        <div class="cancel">Cancel Order</div>
+      </div>
+    </section>
+  </main>
+
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const change = document.getElementById('change');
+      const payment = document.getElementsByClassName('payment')[0];
+      const cancel = document.getElementsByClassName('cancel')[0]; 
+
+      const addHoverEffect = (element, enterStyles, leaveStyles) => {
+        element.addEventListener('mouseenter', () => {
+          Object.assign(element.style, enterStyles);
+        });
+
+        element.addEventListener('mouseleave', () => {
+          Object.assign(element.style, leaveStyles);
+        });
+      };
+
+      addHoverEffect(change, 
+        { color: 'hsla(245, 75%, 75%)', textDecoration: 'none' },
+        { color: 'hsl(245, 75%, 52%)', textDecoration: 'underline' }
+      );
+
+      addHoverEffect(payment, 
+        { backgroundColor: 'hsla(245, 75%, 65%)' },
+        { backgroundColor: '' } 
+      );
+
+      addHoverEffect(cancel, 
+        { color: 'hsl(223, 47%, 23%)' },
+        { color: '' }
+      );
+    });
+  </script>
+</body>
+</html>
